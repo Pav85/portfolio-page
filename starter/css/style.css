@@ -1,0 +1,276 @@
+:root {
+    --repeatedColor1: #FBE8A6;
+    --repeatedColor2: #F4976C;
+    --repeatedColor3: #303C6C;
+    --repeatedColor4: #B4DFE5;
+    --repeatedColor5: #D2FDFF;
+  }
+
+  * {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--repeatedColor3);
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+  
+  p {
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 6rem;
+  }
+
+  h2 {
+    font-size: 4.2rem;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--repeatedColor3);
+  }
+  
+  /* header */
+
+.header {
+    background-color: var(--repeatedColor2);
+    color: var(--repeatedColor3);
+  }
+
+.title {
+    background-color: var(--repeatedColor1);
+    padding: 1.7rem 3rem 1.5rem 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: 2.6rem;
+    color: var(--repeatedColor3);
+    margin-inline-end: auto;
+    
+}  
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--repeatedColor2);
+    border-bottom: 0.3rem solid var(--repeatedColor3);
+    
+}
+
+.navList {
+    display: flex;
+    margin: 1rem 1rem 1rem 0;
+}
+
+.navList a {
+    display: block;
+    font-size: 2.6rem;
+    font-weight: 500;
+    padding: 2rem;
+}
+
+.navList a:hover {
+    background-color: var(--repeatedColor1);
+}
+
+/* hero banner section */
+
+.heroBanner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 45vh;
+    background-color: var(--repeatedColor1);
+    background-image: url(../images/Pawel\ hero\ pic.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 0.5rem solid var(--repeatedColor5);
+}
+
+.pageWrapper {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows:auto auto auto;
+    grid-template-areas:
+         "aboutMe contentAboutMe"
+         "work contentWork"
+         "contactMe contentContactMe"  
+         ;
+    background-color: var(--repeatedColor4);
+}
+
+/* About Me */
+
+#aboutMe {
+    grid-area: aboutMe;
+}
+
+.aboutMe {
+    min-height: 300px;
+    border-right: 0.5rem solid var(--repeatedColor3);
+    text-align: right;
+    margin-top: 3rem;
+    margin-right: 3rem;
+    padding-right: 2.5rem;
+    }
+
+.contentAboutMe p {
+    font-size: 2.2rem;
+    margin: 4rem 8rem 4rem 7rem;
+    text-align: justify;
+}
+
+#work {
+    grid-area: work;
+    
+}
+
+.work {
+    min-height: max-content;
+    border-right: 0.5rem solid var(--repeatedColor3);
+    text-align: right;
+    margin-top: 2rem;
+    margin-right: 3rem;
+    padding-right: 2.5rem;
+
+}
+/*Grid with projects */
+
+.projectsGrid {
+    display: grid;
+    margin: 0px 5%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 300px 300px;
+    grid-template-areas: 
+
+         "prework prework"
+         "prework prework"
+         "horiseon-code-refactor my-bio-page"
+        ;
+}
+
+#prework {
+    background-image: url(../images/02-portfolio-2.jpg);
+    grid-area: prework;
+    
+}
+
+#horiseon-code-refactor {
+    background-image: url(../images/02-portfolio-1.jpg);
+    grid-area: horiseon-code-refactor;
+}
+
+#my-bio-page {
+    background-image: url(../images/02-portfolio-4.jpg);
+    grid-area: my-bio-page;
+}
+
+.projectsGridArea {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0.5rem;
+    cursor: pointer;
+    display: grid;
+    align-content: end;
+    border: 0.5rem solid var(--repeatedColor2);
+    
+}
+
+.heading {
+    
+    background-color: var(--repeatedColor3);
+    opacity: 0.9;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--repeatedColor5);
+    margin-inline-end: auto;
+}
+
+
+/* Contact me */
+
+#contactMe {
+    grid-area: contactMe;
+    
+}
+
+.contactMe {
+    min-height: 300px;
+    border-right: 0.5rem solid var(--repeatedColor3);
+    text-align: right;
+    margin-top: 2rem;
+    margin-right: 3rem;
+    margin-bottom: 1.5rem;
+    margin: 2rem 3rem 2rem 0;
+    padding-right: 2.5rem;
+    
+}
+
+.contactLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+
+.buttonContacts {
+    text-decoration: underline var(--repeatedColor2);
+
+}
+
+.contactLinks p {
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+
+
+/* footer */
+
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 2.8rem;
+    font-weight: 200;
+    padding: 2rem;
+    width: 100%;
+    bottom: 0;
+    background-color: var(--repeatedColor2);
+    color: var(--repeatedColor3);
+    border-top: 0.3rem solid var(--repeatedColor1);
+}
+
+
+
+
